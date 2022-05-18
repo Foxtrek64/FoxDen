@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{CE63
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Server", "Backend\FoxDen.Server\FoxDen.Server.csproj", "{D4E28F30-E175-4710-82C5-E92D9ACAF30F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{F64A4132-8322-41C9-BD42-18903666CD60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D4E28F30-E175-4710-82C5-E92D9ACAF30F} = {CE631FC8-2769-41CD-A304-1C7BDA70979A}
+		{F64A4132-8322-41C9-BD42-18903666CD60} = {CE631FC8-2769-41CD-A304-1C7BDA70979A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4B59653-6713-46B9-A75A-2CCA2FE10507}
