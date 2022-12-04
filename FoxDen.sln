@@ -5,9 +5,52 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{99E985E6-20DA-407E-A5F6-3EC0292A7C98}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.Data", "FoxDen.Data\FoxDen.Data.csproj", "{9E4E4A1B-2B91-42B3-9BCE-D80FD06FDF74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.Web", "FoxDen.Web\FoxDen.Web.csproj", "{5734D754-3983-463C-AB07-D9FC3DCC6A13}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.API", "FoxDen.API\FoxDen.API.csproj", "{499310D2-5BA4-4A88-A77C-94CE9C4CDCB3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{C1587F93-5B50-4580-8267-9014991B0595}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.Plugins.TimeKeeper", "Plugins\FoxDen.Plugins.TimeKeeper\FoxDen.Plugins.TimeKeeper.csproj", "{B2A76633-E3B6-4DE7-92FD-BB595A78156B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Maui", "FoxDen.Maui\FoxDen.Maui.csproj", "{7AD3B1CE-7E89-40D9-A07D-6FE442F52239}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E4E4A1B-2B91-42B3-9BCE-D80FD06FDF74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4E4A1B-2B91-42B3-9BCE-D80FD06FDF74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4E4A1B-2B91-42B3-9BCE-D80FD06FDF74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4E4A1B-2B91-42B3-9BCE-D80FD06FDF74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5734D754-3983-463C-AB07-D9FC3DCC6A13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5734D754-3983-463C-AB07-D9FC3DCC6A13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5734D754-3983-463C-AB07-D9FC3DCC6A13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5734D754-3983-463C-AB07-D9FC3DCC6A13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{499310D2-5BA4-4A88-A77C-94CE9C4CDCB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{499310D2-5BA4-4A88-A77C-94CE9C4CDCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{499310D2-5BA4-4A88-A77C-94CE9C4CDCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{499310D2-5BA4-4A88-A77C-94CE9C4CDCB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2A76633-E3B6-4DE7-92FD-BB595A78156B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2A76633-E3B6-4DE7-92FD-BB595A78156B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2A76633-E3B6-4DE7-92FD-BB595A78156B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2A76633-E3B6-4DE7-92FD-BB595A78156B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD3B1CE-7E89-40D9-A07D-6FE442F52239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD3B1CE-7E89-40D9-A07D-6FE442F52239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AD3B1CE-7E89-40D9-A07D-6FE442F52239}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7AD3B1CE-7E89-40D9-A07D-6FE442F52239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD3B1CE-7E89-40D9-A07D-6FE442F52239}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD3B1CE-7E89-40D9-A07D-6FE442F52239}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2A76633-E3B6-4DE7-92FD-BB595A78156B} = {C1587F93-5B50-4580-8267-9014991B0595}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4B59653-6713-46B9-A75A-2CCA2FE10507}

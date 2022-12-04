@@ -11,3 +11,13 @@ FoxDen is an application suite designed to centralize convention management into
 * Role-based Authentication
 
 1: User limit determined by directory services backing.
+
+## Components
+
+* FoxDen.API - Provides a REST API for integrating with services. Can be ignored if not needed.
+* FoxDen.Data - Common libraries for communicating with the database and sharing data types. Used by both FoxDen.API and FoxDen.Web
+* FoxDen.Web - Blazor WebAssembly application used for accessing the management interface.
+
+## Database Support
+
+By default, Microsoft SQL Server is supported. Support for PostgreSQL is planned but is not yet implemented.
