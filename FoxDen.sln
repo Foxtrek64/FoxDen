@@ -3,11 +3,48 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{99E985E6-20DA-407E-A5F6-3EC0292A7C98}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9549CA43-2850-444B-8BA9-227832806124}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{EA7456DB-8D4B-461E-A579-FA1EA95FDDFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{4364E056-06B2-448A-A87B-8549E2B50C1D}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Web.Server", "src\FoxDen.Web\Server\FoxDen.Web.Server.csproj", "{92F5A359-64D1-4E84-87F7-04BDC2CEF11D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Web.Client", "src\FoxDen.Web\Client\FoxDen.Web.Client.csproj", "{73D418A0-14D9-4217-B71C-5D39F8848409}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Web.Shared", "src\FoxDen.Web\Shared\FoxDen.Web.Shared.csproj", "{46232C53-76A3-4B53-8ADE-320AE9BA2745}"
 EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92F5A359-64D1-4E84-87F7-04BDC2CEF11D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F5A359-64D1-4E84-87F7-04BDC2CEF11D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F5A359-64D1-4E84-87F7-04BDC2CEF11D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F5A359-64D1-4E84-87F7-04BDC2CEF11D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73D418A0-14D9-4217-B71C-5D39F8848409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73D418A0-14D9-4217-B71C-5D39F8848409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73D418A0-14D9-4217-B71C-5D39F8848409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73D418A0-14D9-4217-B71C-5D39F8848409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46232C53-76A3-4B53-8ADE-320AE9BA2745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46232C53-76A3-4B53-8ADE-320AE9BA2745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46232C53-76A3-4B53-8ADE-320AE9BA2745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46232C53-76A3-4B53-8ADE-320AE9BA2745}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{92F5A359-64D1-4E84-87F7-04BDC2CEF11D} = {9549CA43-2850-444B-8BA9-227832806124}
+		{73D418A0-14D9-4217-B71C-5D39F8848409} = {9549CA43-2850-444B-8BA9-227832806124}
+		{46232C53-76A3-4B53-8ADE-320AE9BA2745} = {9549CA43-2850-444B-8BA9-227832806124}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4B59653-6713-46B9-A75A-2CCA2FE10507}
