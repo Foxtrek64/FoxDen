@@ -1,9 +1,14 @@
 ﻿<Project>
 
+	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk.BlazorWebAssembly" />
+	<Import Project="Sdk.props" Sdk="Remora.Sdk" />
+
 	<PropertyGroup>
 		<VersionPrefix>0.1.0</VersionPrefix>
 		<Description>Provides a default web client for accessing FoxDen.</Description>
 		<PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+		<ExecutableFrameworks>net8.0</ExecutableFrameworks>
+		<OutputType>exe</OutputType>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -11,10 +16,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="7.0.10" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="7.0.10" PrivateAssets="all" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="7.0.10" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.0" PrivateAssets="all" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -25,8 +30,8 @@
 		<ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
 	</ItemGroup>
 
-	<Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk.BlazorWebAssembly"/>
-	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk.BlazorWebAssembly"/>
-	<Import Project="Sdk.props" Sdk="Remora.Sdk"/>
-	<Import Project="Sdk.targets" Sdk="Remora.Sdk"/>
+	
+	<Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk.BlazorWebAssembly" />	
+	<Import Project="Sdk.targets" Sdk="Remora.Sdk" />
+
 </Project>

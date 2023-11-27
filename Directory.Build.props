@@ -1,13 +1,13 @@
 <Project>
-	
-  <PropertyGroup>
-    <LegalAuthor>Naka-Kon Contributors</LegalAuthor>
-    <LegalEmail>operations@naka-kon.com</LegalEmail>
-    <Company>Naka-Kon</Company>
-    <LegalCopyrightHolder>Naka-Kon</LegalCopyrightHolder>
-  </PropertyGroup>
 
-  <PropertyGroup>
+	<PropertyGroup>
+		<LegalAuthor>Naka-Kon Contributors</LegalAuthor>
+		<LegalEmail>operations@naka-kon.com</LegalEmail>
+		<Company>Naka-Kon</Company>
+		<LegalCopyrightHolder>Naka-Kon</LegalCopyrightHolder>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<SolutionDir>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)/))</SolutionDir>
 	</PropertyGroup>
 
