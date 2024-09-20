@@ -1,0 +1,23 @@
+<Project>
+    <PropertyGroup>
+        <LegalAuthor>LuzFaltex Contributors</LegalAuthor>
+        <LegalEmail>support@luzfaltex.com</LegalEmail>
+        <Company>LuzFaltex, LLC.</Company>
+        <LegalCopyrightHolder>LuzFaltex, LLC.</LegalCopyrightHolder>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <SolutionDir>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)/))</SolutionDir>
+        <ProjectDeprecated>false</ProjectDeprecated>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <RepositoryBranch>main</RepositoryBranch>
+        <RepositoryUrl>https://github.com/LuzFaltex/FoxDen</RepositoryUrl>
+
+        <PackageProjectUrl>https://github.com/LuzFaltex/FoxDen</PackageProjectUrl>
+        <PackageOutputPath>$(SolutionDir)/nuget</PackageOutputPath>
+        <PackageTags>Management;Convention;Users;Tracking</PackageTags>
+        <PackageIconPath>$(SolutionDir)/fox_logo.png</PackageIconPath>
+    </PropertyGroup>
+</Project>

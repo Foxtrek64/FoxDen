@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <SupportedPlatform Include="browser"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.6"/>
+        <PackageReference Include="Remora.Results" />
+        <PackageReference Include="Remora.Results.Analyzers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\FoxDen.API\FoxDen.API.csproj" />
+    </ItemGroup>
+
+</Project>

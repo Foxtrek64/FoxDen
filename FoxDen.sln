@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58B68F11-1C4B-4E67-A078-FB1CFAF56554}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A2B453E7-D08B-4148-92DE-D3D2507425F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BAF622C5-2D84-40A7-9CB8-11954360DA8E}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		Directory.Packages.props = Directory.Packages.props
+		Directory.Build.targets = Directory.Build.targets
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A0DEF1AD-1C12-458A-BF03-329FB9EFE96A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{9CA42DCA-38E7-4DC2-8BF4-41D7FC15A791}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet-test.yml = .github\workflows\dotnet-test.yml
+		.github\workflows\merge.yml = .github\workflows\merge.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2B3FEA84-20FC-4EE9-82FF-1E6B8A1F129B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Core", "src\FoxDen.Core\FoxDen.Core.csproj", "{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Modules.API", "src\Modules\FoxDen.Modules.API\FoxDen.Modules.API.csproj", "{9D329069-876B-4B2B-9841-1F09F9D73C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.API", "src\FoxDen.API\FoxDen.API.csproj", "{3A2FD672-F2A0-43F7-BD89-425B97C97F42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9CA42DCA-38E7-4DC2-8BF4-41D7FC15A791} = {A0DEF1AD-1C12-458A-BF03-329FB9EFE96A}
+		{2B3FEA84-20FC-4EE9-82FF-1E6B8A1F129B} = {58B68F11-1C4B-4E67-A078-FB1CFAF56554}
+		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14} = {58B68F11-1C4B-4E67-A078-FB1CFAF56554}
+		{9D329069-876B-4B2B-9841-1F09F9D73C4B} = {2B3FEA84-20FC-4EE9-82FF-1E6B8A1F129B}
+		{3A2FD672-F2A0-43F7-BD89-425B97C97F42} = {58B68F11-1C4B-4E67-A078-FB1CFAF56554}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

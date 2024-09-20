@@ -1,0 +1,14 @@
+﻿<Project Sdk="Remora.Sdk">
+
+    <PropertyGroup>
+        <VersionPrefix>0.1.0</VersionPrefix>
+        <Description>Provides a set of common interfaces and types for FoxDen.</Description>
+        <PackageReleaseNotes>Initial release.</PackageReleaseNotes>
+        <PackageTags>$(PackageTags);LuzFaltex;FoxDen;Core;</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Remora.Results" />
+    </ItemGroup>
+
+</Project>
