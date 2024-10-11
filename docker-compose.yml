@@ -1,6 +1,0 @@
-﻿services:
-  foxden.core:
-    image: foxden.core
-    build:
-      context: .
-      dockerfile: src/FoxDen.Core/Dockerfile

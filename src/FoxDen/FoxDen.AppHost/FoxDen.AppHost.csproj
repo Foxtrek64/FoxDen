@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>74051a20-231f-4de0-b3cc-fdce377ffb3e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <ProjectReference Include="..\..\Modules\FoxDen.Modules.Discord\FoxDen.Modules.Discord.csproj" />
+    <ProjectReference Include="..\FoxDen.ApiService\FoxDen.ApiService.csproj" />
+    <ProjectReference Include="..\FoxDen.Commander\FoxDen.Commander.csproj" />
+    <ProjectReference Include="..\FoxDen.Data\FoxDen.Data.csproj" IsAspireProjectResource="false"/>
+	  <ProjectReference Include="..\FoxDen.Data.Abstractions\FoxDen.Data.Abstractions.csproj" IsAspireProjectResource="false"/>
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Aspire.Hosting.AppHost" />
+	  <PackageReference Include="Aspire.Hosting.PostgreSQL" />
+	  <PackageReference Include="Aspire.Hosting.Redis" />
+	  <PackageReference Include="Aspire.Hosting.Keycloak" />
+	  <PackageReference Include="System.IO.Hashing" />
+  </ItemGroup>
+
+</Project>

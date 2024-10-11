@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="FoxDen.Commander.styles.css" />
+    <link href="_content/FluentUI.Demo.Shared/css/site.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css" rel="stylesheet" />
+    <script src="_content/Microsoft.FluentUI.AspNetCore.Components/Microsoft.FluentUI.AspNetCore.Components.lib.module.js" type="module" async></script>
+    <HeadOutlet />
+
+    <FluentDesignTheme StorageName="theme" />
+    <FluentDesignTheme Mode="DesignThemeModes.Dark" OfficeColor="OfficeColor.Default" />
+    <FluentDesignTheme Mode="DesignThemeModes.Light" OfficeColor="OfficeColor.Default" />
+</head>
+
+<body>
+    <Routes />
+    <script src="_framework/blazor.web.js"></script>
+    <script src="_content/Microsoft.FluentUI.AspNetCore.Components/js/loading-theme.js" type="text/javascript"></script>
+    <loading-theme storage-name="theme"></loading-theme>
+</body>
+
+</html>

@@ -6,11 +6,55 @@
     <PackageReference Update="StyleCop.Analyzers" Version="1.2.0-beta.556" />
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="JetBrains.Annotations" Version="2024.2.0" />
-    <PackageVersion Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.6" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.6" />
-    <PackageVersion Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageVersion Include="Aspire.Hosting.AppHost" Version="8.2.0" />
+    <PackageVersion Include="Aspire.Hosting.Keycloak" Version="8.2.0-preview.1.24428.5" />
+    <PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="8.2.0" />
+    <PackageVersion Include="Aspire.Hosting.Redis" Version="8.2.0" />
+    <PackageVersion Include="Aspire.Keycloak.Authentication" Version="8.2.0-preview.1.24428.5" />
+    <PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.2.0" />
+    <PackageVersion Include="Aspire.StackExchange.Redis" Version="8.2.1" />
+    <PackageVersion Include="Aspire.StackExchange.Redis.DistributedCaching" Version="8.2.1" />
+    <PackageVersion Include="Aspire.StackExchange.Redis.OutputCaching" Version="8.2.0" />
+    <PackageVersion Include="AspNet.Security.OAuth.Discord" Version="8.2.0" />
+    <PackageVersion Include="Keycloak.AuthServices.Aspire.Hosting" Version="0.1.0" />
+    <PackageVersion Include="Keycloak.AuthServices.Authentication" Version="2.5.3" />
+    <PackageVersion Include="Keycloak.AuthServices.Common" Version="2.5.3" />
+    <PackageVersion Include="Keycloak.AuthServices.OpenTelemetry" Version="1.0.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="8.9.1" />
+    <PackageVersion Include="Microsoft.Extensions.Identity.Stores" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="8.2.0" />
+    <PackageVersion Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.5" />
+    <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.9.0" />
+    <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.9.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.9.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.9.0" />
+    <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.9.0" />
+    <PackageVersion Include="Remora.Discord" Version="2024.3.0" />
+    <PackageVersion Include="Remora.Discord.Caching.Redis" Version="1.1.8" />
     <PackageVersion Include="Remora.Results" Version="7.4.1" />
     <PackageVersion Include="Remora.Results.Analyzers" Version="1.0.2" />
+    <PackageVersion Include="Serilog" Version="4.0.2" />
+    <PackageVersion Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageVersion Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageVersion Include="Serilog.Settings.Configuration" Version="8.0.2" />
+    <PackageVersion Include="Serilog.Sinks.ApplicationInsights" Version="4.0.0" />
+    <PackageVersion Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageVersion Include="Serilog.Sinks.Debug" Version="3.0.0" />
+    <PackageVersion Include="Serilog.Sinks.OpenTelemetry" Version="4.1.1" />
+    <PackageVersion Include="Serilog.Sinks.Postgresql.Alternative" Version="4.1.1" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+    <PackageVersion Include="System.IO.Hashing" Version="8.0.0" />
+    <PackageVersion Include="System.Text.Json" Version="8.0.4" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Remora.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<VersionPrefix>0.1.0</VersionPrefix>
+		<Description>Provides functionality to access the Discord API and manage Discord Guilds.</Description>
+		<PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+		<PackageTags>$(PackageTags);Discord;</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Aspire.StackExchange.Redis" />
+	  <PackageReference Include="Aspire.StackExchange.Redis.DistributedCaching" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting" />
+	  <PackageReference Include="Remora.Discord" />
+	  <PackageReference Include="Remora.Discord.Caching.Redis" />
+	  <PackageReference Include="Serilog" />
+	  <PackageReference Include="Serilog.Extensions.Hosting" />
+	  <PackageReference Include="Serilog.Extensions.Logging" />
+	  <PackageReference Include="Serilog.Settings.Configuration" />
+	  <PackageReference Include="Serilog.Sinks.Console" />
+	  <PackageReference Include="Serilog.Sinks.Debug" />
+	  <PackageReference Include="Serilog.Sinks.OpenTelemetry" />
+	  <PackageReference Include="Serilog.Sinks.Postgresql.Alternative" />
+	</ItemGroup>
+
+	<Target Name="GetTargetPath" Returns="@(_FakeOutputPath)">
+		<ItemGroup>
+			<_FakeOutputPath Incude="$(MSBuildProjectDirectory)\$(PackageOutputPath)\$(AssemblyName).dll" />
+		</ItemGroup>
+	</Target>
+
+</Project>

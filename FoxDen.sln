@@ -9,12 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A2B453E7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BAF622C5-2D84-40A7-9CB8-11954360DA8E}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
 		Directory.Build.props = Directory.Build.props
-		global.json = global.json
-		Directory.Packages.props = Directory.Packages.props
 		Directory.Build.targets = Directory.Build.targets
-		docker-compose.yml = docker-compose.yml
+		Directory.Packages.props = Directory.Packages.props
+		global.json = global.json
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{A0DEF1AD-1C12-458A-BF03-329FB9EFE96A}"
@@ -27,16 +26,59 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{2B3FEA84-20FC-4EE9-82FF-1E6B8A1F129B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Core", "src\FoxDen.Core\FoxDen.Core.csproj", "{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.AppHost", "src\FoxDen\FoxDen.AppHost\FoxDen.AppHost.csproj", "{FFF3BDC2-CF4E-48AE-AF25-1600F1103940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Modules.API", "src\Modules\FoxDen.Modules.API\FoxDen.Modules.API.csproj", "{9D329069-876B-4B2B-9841-1F09F9D73C4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.ServiceDefaults", "src\FoxDen\FoxDen.ServiceDefaults\FoxDen.ServiceDefaults.csproj", "{AB0C14EC-8B18-4318-AB69-D563DB09AB83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.API", "src\FoxDen.API\FoxDen.API.csproj", "{3A2FD672-F2A0-43F7-BD89-425B97C97F42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.ApiService", "src\FoxDen\FoxDen.ApiService\FoxDen.ApiService.csproj", "{2B56EA89-4E65-41E3-9030-04A012B67485}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.Data", "src\FoxDen\FoxDen.Data\FoxDen.Data.csproj", "{78936BB4-007C-4F81-A41F-EB14D08B2577}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.Commander", "src\FoxDen\FoxDen.Commander\FoxDen.Commander.csproj", "{F1BED2E3-69B4-48A9-AB87-9897B2ADF485}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FoxDen.Modules.Discord", "src\Modules\FoxDen.Modules.Discord\FoxDen.Modules.Discord.csproj", "{0C3CA870-A144-4B0B-8DC1-B6C3A3005E16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FoxDen", "FoxDen", "{E95EB92F-D2E7-4726-8DE8-DF82792A7B58}"
+	ProjectSection(SolutionItems) = preProject
+		src\FoxDen\Directory.Packages.props = src\FoxDen\Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Data.Abstractions", "src\FoxDen\FoxDen.Data.Abstractions\FoxDen.Data.Abstractions.csproj", "{589D99D1-7B3B-4027-9F15-05140E9B5973}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFF3BDC2-CF4E-48AE-AF25-1600F1103940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF3BDC2-CF4E-48AE-AF25-1600F1103940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF3BDC2-CF4E-48AE-AF25-1600F1103940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF3BDC2-CF4E-48AE-AF25-1600F1103940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0C14EC-8B18-4318-AB69-D563DB09AB83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0C14EC-8B18-4318-AB69-D563DB09AB83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0C14EC-8B18-4318-AB69-D563DB09AB83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0C14EC-8B18-4318-AB69-D563DB09AB83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B56EA89-4E65-41E3-9030-04A012B67485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B56EA89-4E65-41E3-9030-04A012B67485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B56EA89-4E65-41E3-9030-04A012B67485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B56EA89-4E65-41E3-9030-04A012B67485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78936BB4-007C-4F81-A41F-EB14D08B2577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78936BB4-007C-4F81-A41F-EB14D08B2577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78936BB4-007C-4F81-A41F-EB14D08B2577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78936BB4-007C-4F81-A41F-EB14D08B2577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1BED2E3-69B4-48A9-AB87-9897B2ADF485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1BED2E3-69B4-48A9-AB87-9897B2ADF485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1BED2E3-69B4-48A9-AB87-9897B2ADF485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1BED2E3-69B4-48A9-AB87-9897B2ADF485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C3CA870-A144-4B0B-8DC1-B6C3A3005E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C3CA870-A144-4B0B-8DC1-B6C3A3005E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C3CA870-A144-4B0B-8DC1-B6C3A3005E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C3CA870-A144-4B0B-8DC1-B6C3A3005E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589D99D1-7B3B-4027-9F15-05140E9B5973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589D99D1-7B3B-4027-9F15-05140E9B5973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589D99D1-7B3B-4027-9F15-05140E9B5973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589D99D1-7B3B-4027-9F15-05140E9B5973}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,22 +86,16 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9CA42DCA-38E7-4DC2-8BF4-41D7FC15A791} = {A0DEF1AD-1C12-458A-BF03-329FB9EFE96A}
 		{2B3FEA84-20FC-4EE9-82FF-1E6B8A1F129B} = {58B68F11-1C4B-4E67-A078-FB1CFAF56554}
-		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14} = {58B68F11-1C4B-4E67-A078-FB1CFAF56554}
-		{9D329069-876B-4B2B-9841-1F09F9D73C4B} = {2B3FEA84-20FC-4EE9-82FF-1E6B8A1F129B}
-		{3A2FD672-F2A0-43F7-BD89-425B97C97F42} = {58B68F11-1C4B-4E67-A078-FB1CFAF56554}
+		{FFF3BDC2-CF4E-48AE-AF25-1600F1103940} = {E95EB92F-D2E7-4726-8DE8-DF82792A7B58}
+		{AB0C14EC-8B18-4318-AB69-D563DB09AB83} = {E95EB92F-D2E7-4726-8DE8-DF82792A7B58}
+		{2B56EA89-4E65-41E3-9030-04A012B67485} = {E95EB92F-D2E7-4726-8DE8-DF82792A7B58}
+		{78936BB4-007C-4F81-A41F-EB14D08B2577} = {E95EB92F-D2E7-4726-8DE8-DF82792A7B58}
+		{F1BED2E3-69B4-48A9-AB87-9897B2ADF485} = {E95EB92F-D2E7-4726-8DE8-DF82792A7B58}
+		{0C3CA870-A144-4B0B-8DC1-B6C3A3005E16} = {2B3FEA84-20FC-4EE9-82FF-1E6B8A1F129B}
+		{E95EB92F-D2E7-4726-8DE8-DF82792A7B58} = {58B68F11-1C4B-4E67-A078-FB1CFAF56554}
+		{589D99D1-7B3B-4027-9F15-05140E9B5973} = {E95EB92F-D2E7-4726-8DE8-DF82792A7B58}
 	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5F5AA8A-2CB8-472E-BC3E-FD623661AD14}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D329069-876B-4B2B-9841-1F09F9D73C4B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A2FD672-F2A0-43F7-BD89-425B97C97F42}.Release|Any CPU.Build.0 = Release|Any CPU
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7AF598D0-7DCE-48C0-9F6D-1B932BAE0234}
 	EndGlobalSection
 EndGlobal

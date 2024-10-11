@@ -1,0 +1,29 @@
+﻿
+<FluentAppBar Items="@_apps.OrderBy(it => it.Order)">
+
+</FluentAppBar>
+
+@code {
+
+    [Inject] public NavigationManager NavManager { get; set; }
+
+    private class FluentCustomAppBarItem : FluentAppBarItem
+    {
+        public int Order { get; set; }
+    }
+
+    private FluentCustomAppBarItem home = new FluentCustomAppBarItem { Order = 1, IconRest = new Icons.Regular.Size24.AppFolder(), IconActive = new Icons.Filled.Size24.AppFolder(), Text = "Dashboard" };
+    private FluentCustomAppBarItem counter = new FluentCustomAppBarItem { Order = 2, IconRest = new Icons.Regular.Size24.NumberSymbolSquare(), IconActive = new Icons.Filled.Size24.NumberSymbolSquare(), Text = "Counter", Href = "/counter" };
+    private FluentCustomAppBarItem weather = new FluentCustomAppBarItem { Order = 3, IconRest = new Icons.Regular.Size24.WeatherPartlyCloudyDay(), IconActive = new Icons.Filled.Size24.WeatherPartlyCloudyDay(), Text = "Weather", Href = "/weather" };
+
+    private List<FluentCustomAppBarItem> _apps = new();
+
+    protected override void OnInitialized()
+    {
+        home.Href = NavManager.BaseUri;
+
+        _apps.AddRange([home, counter, weather]);
+
+        base.OnInitialized();
+    }
+}

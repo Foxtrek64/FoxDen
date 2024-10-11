@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+
+@inject LogOutService LogOutService
+@inject NavigationManager Nav
+
+<AuthorizeView>
+    <Authorized>
+        <h3>@context.User.Identity?.Name ?? "Guest"</h3>
+        <div class="dropdown-menu">
+            <span class="dropdown-button"><img role="presentation" src="icons/user.svg" /></span>
+            <div class="dropdown-content">
+                <form class="dropdown-item" method="post" action="user/logout" @formname="logout" onsubmit="LogOutAsync">
+                    <AntiforgeryToken />
+                    <button type="submit">Log out</button>
+                </form>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <!--<a aria-label="Sign in" href="@Areas.Identity.Pages.Account.LoginModel"><img role="presentation" src="icons/user.svg" /></a>-->
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    [CascadingParameter]
+    public required HttpContext httpContext { get; set; }
+
+    private Task LogOutAsync()
+        => LogOutService.LogOutAsync(httpContext);
+}

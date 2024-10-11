@@ -1,0 +1,25 @@
+﻿@using System.Security.Principal
+@using System.Security.Claims
+
+<AuthorizeView>
+    <Authorized>
+        <FluentProfileMenu HeaderLabel="@(@context.User.IsInRole("nakakon") ? "Naka-Kon" : "Attendee")"
+                           FullName="@(context.User.Identity?.Name ?? "Guest")"
+                           EMail="@(context.User.Claims.FirstOrDefault(it => it.Type == ClaimTypes.Email)?.Value ?? string.Empty)"
+                           >
+        </FluentProfileMenu>
+    </Authorized>
+    <NotAuthorized>
+        <div class="links">
+            <FluentLabel>Welcome, Guest.
+                <FluentAnchor Appearance="@Appearance.Hypertext" Href="/login">
+                    <FluentLabel Color="@Color.FillInverse">Sign In</FluentLabel>
+                </FluentAnchor>
+            </FluentLabel>
+        </div>
+        
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+}

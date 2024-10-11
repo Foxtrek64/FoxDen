@@ -17,7 +17,7 @@
 
         <PackageProjectUrl>https://github.com/LuzFaltex/FoxDen</PackageProjectUrl>
         <PackageOutputPath>$(SolutionDir)/nuget</PackageOutputPath>
-        <PackageTags>Management;Convention;Users;Tracking</PackageTags>
+        <PackageTags>Management;Convention;Users;Tracking;FoxDen</PackageTags>
         <PackageIconPath>$(SolutionDir)/fox_logo.png</PackageIconPath>
     </PropertyGroup>
 </Project>
