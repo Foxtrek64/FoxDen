@@ -1,5 +1,5 @@
 ﻿//
-//  FoxDenDbContext.cs
+//  IFrontEndPlugin.cs
 //
 //  Author:
 //       LuzFaltex Contributors <support@luzfaltex.com>
@@ -20,25 +20,12 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-using FoxDen.Data.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace FoxDen.Data
+namespace FoxDen.Modules.Base.Plugins
 {
     /// <summary>
-    /// Provides a data context for the application.
+    /// A plugin intended only for registration with the front-end.
     /// </summary>
-    /// <param name="options">Options for this application.</param>
-    public sealed class FoxDenDbContext(DbContextOptions<FoxDenDbContext> options) : DbContext(options)
+    public interface IFrontEndPlugin
     {
-        /// <summary>
-        /// Gets the configured app registrations.
-        /// </summary>
-        public DbSet<AppRegistration> AppRegistrations => Set<AppRegistration>();
-
-        /// <summary>
-        /// Gets the configured app bar registrations.
-        /// </summary>
-        public DbSet<AppBarRegistration> AppBarRegistrations => Set<AppBarRegistration>();
     }
 }

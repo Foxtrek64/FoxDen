@@ -1,4 +1,5 @@
 using FoxDen.AppHost.Extensions;
+using FoxDen.AppHost.Swagger;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
@@ -46,7 +47,8 @@ var realm = keycloak.WithRealmImport("realms", isReadOnly: true)
 var apiService = builder.AddProject<Projects.FoxDen_ApiService>("DataDen")
      .WithReference(keycloak)
      .WithEnvironment("Authentication__Keycloak__Realm", keycloakRealmName)
-     .WithEnvironment("Authentication__Schemes__Bearer__ValidAudience", dataDenClientId);
+     .WithEnvironment("Authentication__Schemes__Bearer__ValidAudience", dataDenClientId)
+     .WithSwaggerUI();
 
 Console.WriteLine(builder.Environment.EnvironmentName);
 

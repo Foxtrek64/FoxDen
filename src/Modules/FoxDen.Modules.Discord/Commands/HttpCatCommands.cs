@@ -35,21 +35,14 @@ using Remora.Results;
 namespace FoxDen.Modules.Discord.Commands;
 
 /// <summary>
-/// Responds to a HttpCat command.
+/// Defines the cat command which posts an image from http.cat.
 /// </summary>
-public class HttpCatCommands : CommandGroup
+/// <remarks>
+/// Initializes a new instance of the <see cref="HttpCatCommands"/> class.
+/// </remarks>
+/// <param name="feedbackService">The feedback service.</param>
+public class HttpCatCommands(FeedbackService feedbackService) : CommandGroup
 {
-    private readonly FeedbackService _feedbackService;
-
-    /// <summary>
-    /// Initializes a new instance of the <see cref="HttpCatCommands"/> class.
-    /// </summary>
-    /// <param name="feedbackService">The feedback service.</param>
-    public HttpCatCommands(FeedbackService feedbackService)
-    {
-        _feedbackService = feedbackService;
-    }
-
     /// <summary>
     /// Posts a HTTP error code cat.
     /// This command will generate ephemeral responses.
@@ -61,8 +54,8 @@ public class HttpCatCommands : CommandGroup
     public async Task<IResult> PostHttpCatAsync([Description("The HTTP code.")] int httpCode)
     {
         var embedImage = new EmbedImage($"https://http.cat/{httpCode}");
-        var embed = new Embed(Colour: _feedbackService.Theme.Secondary, Image: embedImage);
+        var embed = new Embed(Colour: feedbackService.Theme.Secondary, Image: embedImage);
 
-        return (Result)await _feedbackService.SendContextualEmbedAsync(embed, ct: CancellationToken);
+        return (Result)await feedbackService.SendContextualEmbedAsync(embed, ct: CancellationToken);
     }
 }

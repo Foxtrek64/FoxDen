@@ -1,5 +1,5 @@
 ﻿//
-//  FoxDenDbContext.cs
+//  PartialAppRegistration.cs
 //
 //  Author:
 //       LuzFaltex Contributors <support@luzfaltex.com>
@@ -20,25 +20,23 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-using FoxDen.Data.Models;
-using Microsoft.EntityFrameworkCore;
+using Remora.Rest.Core;
 
-namespace FoxDen.Data
+namespace FoxDen.Data.Models.Partials
 {
     /// <summary>
-    /// Provides a data context for the application.
+    /// Describes an <see cref="AppRegistration"/> used for updates. All editable properties are <see cref="Optional{TValue}"/>.
     /// </summary>
-    /// <param name="options">Options for this application.</param>
-    public sealed class FoxDenDbContext(DbContextOptions<FoxDenDbContext> options) : DbContext(options)
+    public sealed record PartialAppRegistration
     {
         /// <summary>
-        /// Gets the configured app registrations.
+        /// Gets or sets the app's name.
         /// </summary>
-        public DbSet<AppRegistration> AppRegistrations => Set<AppRegistration>();
+        public Optional<string> AppName { get; set; }
 
         /// <summary>
-        /// Gets the configured app bar registrations.
+        /// Gets or sets the information about the app bar control.
         /// </summary>
-        public DbSet<AppBarRegistration> AppBarRegistrations => Set<AppBarRegistration>();
+        public Optional<AppBarRegistration> AppBarButton { get; set; }
     }
 }

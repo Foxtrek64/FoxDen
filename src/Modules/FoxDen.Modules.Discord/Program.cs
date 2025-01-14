@@ -22,8 +22,8 @@
 
 using System;
 using System.Threading.Tasks;
+using FoxDen.Modules.Base.Extensions;
 using FoxDen.Modules.Discord.Commands;
-using FoxDen.Modules.Discord.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;

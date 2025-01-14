@@ -1,0 +1,19 @@
+﻿<Project Sdk="Remora.Sdk">
+
+	<PropertyGroup>
+		<LibraryFrameworks>net8.0;net9.0</LibraryFrameworks>
+		<VersionPrefix>0.1.0</VersionPrefix>
+		<TargetNetStandard>false</TargetNetStandard>
+		<Description>Provides functionality to access the Discord API and manage Discord Guilds.</Description>
+		<PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+		<PackageTags>$(PackageTags);Discord;</PackageTags>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+	  <PackageReference Include="Remora.Plugins" />
+	  <PackageReference Include="Serilog" />
+	  <PackageReference Include="Serilog.Sinks.OpenTelemetry" />
+	</ItemGroup>
+
+</Project>

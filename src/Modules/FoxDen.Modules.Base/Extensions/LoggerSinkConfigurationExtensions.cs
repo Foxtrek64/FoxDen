@@ -22,13 +22,11 @@
 
 using System;
 using System.Collections.Generic;
-using System.Reflection.PortableExecutable;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Options;
 using Serilog;
 using Serilog.Configuration;
 
-namespace FoxDen.Modules.Discord.Extensions
+namespace FoxDen.Modules.Base.Extensions
 {
     /// <summary>
     /// Provides extensions for <see cref="LoggerSinkConfiguration"/> instances.
@@ -53,14 +51,14 @@ namespace FoxDen.Modules.Discord.Extensions
             ArgumentNullException.ThrowIfNull(configuration);
 
             return sink.OpenTelemetry(options =>
-                    {
-                        options.IncludedData |= Serilog.Sinks.OpenTelemetry.IncludedData.TraceIdField | Serilog.Sinks.OpenTelemetry.IncludedData.SpanIdField;
-                        options.Endpoint = configuration[OpenTelemetryEndpoint];
-                        AddHeaders(options.Headers, configuration[OpenTelemetryHeaders]);
-                        AddResourceAttributes(options.ResourceAttributes, configuration[OpenTelemetryResourceAttributes]);
-                        var serviceName = configuration[OpenTelemetryServiceName] ?? "Unknown";
-                        options.ResourceAttributes.Add(ServiceNameKey, serviceName);
-                    });
+            {
+                options.IncludedData |= Serilog.Sinks.OpenTelemetry.IncludedData.TraceIdField | Serilog.Sinks.OpenTelemetry.IncludedData.SpanIdField;
+                options.Endpoint = configuration[OpenTelemetryEndpoint];
+                AddHeaders(options.Headers, configuration[OpenTelemetryHeaders]);
+                AddResourceAttributes(options.ResourceAttributes, configuration[OpenTelemetryResourceAttributes]);
+                var serviceName = configuration[OpenTelemetryServiceName] ?? "Unknown";
+                options.ResourceAttributes.Add(ServiceNameKey, serviceName);
+            });
 
             void AddHeaders(IDictionary<string, string> headers, string? headerConfig)
             {
@@ -101,11 +99,11 @@ namespace FoxDen.Modules.Discord.Extensions
             }
         }
 
-        private static IEnumerable<(string RawValue, string? Key, string? Value)> AsKeyValuePairs(string[] headers)
+        private static IEnumerable<(string RawValue, string? Key, string? Value)> AsKeyValuePairs(string[] headers, char splitChar = '=')
         {
             foreach (var header in headers)
             {
-                string[] parts = header.Split('=');
+                string[] parts = header.Split(splitChar);
                 yield return parts.Length switch
                 {
                     2 => (header, parts[0], parts[1]),

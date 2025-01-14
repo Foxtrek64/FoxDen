@@ -1,5 +1,5 @@
 ﻿//
-//  FoxDenDbContext.cs
+//  AppRegistration.cs
 //
 //  Author:
 //       LuzFaltex Contributors <support@luzfaltex.com>
@@ -20,25 +20,28 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-using FoxDen.Data.Models;
-using Microsoft.EntityFrameworkCore;
+using System;
 
-namespace FoxDen.Data
+namespace FoxDen.Data.Models
 {
     /// <summary>
-    /// Provides a data context for the application.
+    /// Represents an application which subscribes to the main app.
     /// </summary>
-    /// <param name="options">Options for this application.</param>
-    public sealed class FoxDenDbContext(DbContextOptions<FoxDenDbContext> options) : DbContext(options)
+    public sealed class AppRegistration
     {
         /// <summary>
-        /// Gets the configured app registrations.
+        /// Gets the globally unique well known id of this app.
         /// </summary>
-        public DbSet<AppRegistration> AppRegistrations => Set<AppRegistration>();
+        public Guid Id { get; init; }
 
         /// <summary>
-        /// Gets the configured app bar registrations.
+        /// Gets or sets the app's name.
         /// </summary>
-        public DbSet<AppBarRegistration> AppBarRegistrations => Set<AppBarRegistration>();
+        public required string AppName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the information about the app bar control.
+        /// </summary>
+        public required AppBarRegistration AppBarButton { get; set; }
     }
 }

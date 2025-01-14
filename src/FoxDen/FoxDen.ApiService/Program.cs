@@ -27,6 +27,7 @@ namespace FoxDen.ApiService
                     npgsqlBuilder.MigrationsAssembly(typeof(FoxDenDbContext).Assembly.GetName().Name);
                 }));
 
+            /*
             builder.Services.AddAuthentication()
                 .AddKeycloakJwtBearer
                 (
@@ -37,6 +38,7 @@ namespace FoxDen.ApiService
                         options.Audience = builder.Configuration.GetValue<string>("Authentication:Schemes:Bearer:ValidAudience");
                         options.RequireHttpsMetadata = builder.Environment.IsProduction();
                     });
+            */
             /*
             builder.Services.AddKeycloakWebApiAuthentication
             (
@@ -47,14 +49,21 @@ namespace FoxDen.ApiService
                 }
             );
             */
-            builder.Services.AddAuthorization();
+            // builder.Services.AddAuthorization();
+
+            builder.Services.AddSwaggerGen();
+            builder.Services.AddEndpointsApiExplorer();
 
             var app = builder.Build();
 
             app.UseHttpsRedirection();
 
+            /*
             app.UseAuthentication();
             app.UseAuthorization();
+            */
+
+            app.UseSwagger();
 
             // Configure the HTTP request pipeline.
             app.UseExceptionHandler();
@@ -63,7 +72,6 @@ namespace FoxDen.ApiService
             {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
-
             app.MapGet("/weatherforecast", () =>
             {
                 var forecast = Enumerable.Range(1, 5).Select(index =>

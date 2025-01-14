@@ -1,5 +1,5 @@
 ﻿//
-//  FoxDenDbContext.cs
+//  IApiPlugin.cs
 //
 //  Author:
 //       LuzFaltex Contributors <support@luzfaltex.com>
@@ -20,25 +20,14 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-using FoxDen.Data.Models;
-using Microsoft.EntityFrameworkCore;
+using Remora.Plugins.Abstractions;
 
-namespace FoxDen.Data
+namespace FoxDen.Modules.Base.Plugins
 {
     /// <summary>
-    /// Provides a data context for the application.
+    /// A marker interface for plugins intended for registration with the Web API.
     /// </summary>
-    /// <param name="options">Options for this application.</param>
-    public sealed class FoxDenDbContext(DbContextOptions<FoxDenDbContext> options) : DbContext(options)
+    public interface IApiPlugin : IPluginDescriptor
     {
-        /// <summary>
-        /// Gets the configured app registrations.
-        /// </summary>
-        public DbSet<AppRegistration> AppRegistrations => Set<AppRegistration>();
-
-        /// <summary>
-        /// Gets the configured app bar registrations.
-        /// </summary>
-        public DbSet<AppBarRegistration> AppBarRegistrations => Set<AppBarRegistration>();
     }
 }

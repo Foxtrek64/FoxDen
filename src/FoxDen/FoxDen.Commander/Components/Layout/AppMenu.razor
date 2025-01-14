@@ -1,11 +1,8 @@
-﻿
-<FluentAppBar Items="@_apps.OrderBy(it => it.Order)">
-
-</FluentAppBar>
+﻿<FluentAppBar Items="@_apps.OrderBy(it => it.Order)" />
 
 @code {
 
-    [Inject] public NavigationManager NavManager { get; set; }
+    [Inject] public NavigationManager NavManager { get; init; }
 
     private class FluentCustomAppBarItem : FluentAppBarItem
     {

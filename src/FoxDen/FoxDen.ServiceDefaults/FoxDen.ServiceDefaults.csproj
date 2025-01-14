@@ -1,9 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Remora.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	  <LibraryFrameworks>net8.0;net9.0</LibraryFrameworks>
+	  <TargetNetStandard>false</TargetNetStandard>
+	  <VersionPrefix>0.1.0</VersionPrefix>
+	  <Description>Provides service defaults.</Description>
+	  <PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+	  <PackageTags>$(PackageTags);Data;</PackageTags>
     <IsAspireSharedProject>true</IsAspireSharedProject>
   </PropertyGroup>
 

@@ -1,13 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Remora.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<LibraryFrameworks>net8.0;net9.0</LibraryFrameworks>
+		<TargetNetStandard>false</TargetNetStandard>
+		<VersionPrefix>0.1.0</VersionPrefix>
+		<Description>Provides database access.</Description>
+		<PackageReleaseNotes>Initial Release.</PackageReleaseNotes>
+		<PackageTags>$(PackageTags);Data;</PackageTags>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
+		<PackageReference Include="Remora.Rest.Core" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
+		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" />
 	</ItemGroup>
 
 	<ItemGroup>
