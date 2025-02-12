@@ -1,0 +1,25 @@
+﻿@using Rest = Microsoft.FluentUI.AspNetCore.Components.Icons.Regular.Size24
+@using Active = Microsoft.FluentUI.AspNetCore.Components.Icons.Filled.Size24
+
+<FluentStack Orientation="Orientation.Vertical" Width="auto">
+    <FluentAppBar
+        Items="@_apps.OrderBy(a => a.Order)"
+        Style="height: 100%; background-color: var(--neutral-layer-2)">
+    </FluentAppBar>
+</FluentStack>
+
+
+@code {
+
+    private class FluentCustomAppBarItem : FluentAppBarItem
+    {
+        public int Order { get; set; }
+    }
+
+    private IReadOnlyList<FluentCustomAppBarItem> _apps =
+    [
+        new() { Order = 1, IconRest = new Rest.Home(), IconActive = new Active.Home(), Text = "Home", Href = "/" },
+        new() { Order = 2, IconRest = new Rest.NumberSymbolSquare(), IconActive = new Active.NumberSymbolSquare(), Text = "Counter", Href = "counter" },
+        new() { Order = 3, IconRest = new Rest.WeatherPartlyCloudyDay(), IconActive = new Active.WeatherPartlyCloudyDay(), Text = "Weather", Href = "weather" }
+    ];
+}

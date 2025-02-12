@@ -6,46 +6,39 @@
     <!--<PackageVersion Update="JetBrains.Annotations" Version="2024.3.0" />-->
   </ItemGroup>
   <ItemGroup>
-    <PackageVersion Include="Aspire.Hosting.AppHost" Version="9.0.0" />
-    <PackageVersion Include="Aspire.Hosting.Keycloak" Version="8.2.0-preview.1.24428.5" />
-    <PackageVersion Include="Aspire.Hosting.PostgreSQL" Version="9.0.0" />
-    <PackageVersion Include="Aspire.Hosting.Redis" Version="9.0.0" />
-    <PackageVersion Include="Aspire.Keycloak.Authentication" Version="8.2.0-preview.1.24428.5" />
-    <PackageVersion Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.0" />
-    <PackageVersion Include="Aspire.StackExchange.Redis" Version="9.0.0" />
-    <PackageVersion Include="Aspire.StackExchange.Redis.DistributedCaching" Version="9.0.0" />
-    <PackageVersion Include="Aspire.StackExchange.Redis.OutputCaching" Version="8.2.0" />
-    <PackageVersion Include="AspNet.Security.OAuth.Discord" Version="8.2.0" />
-    <PackageVersion Include="Keycloak.AuthServices.Aspire.Hosting" Version="0.1.0" />
-    <PackageVersion Include="Keycloak.AuthServices.Authentication" Version="2.5.3" />
-    <PackageVersion Include="Keycloak.AuthServices.Common" Version="2.5.3" />
-    <PackageVersion Include="Keycloak.AuthServices.OpenTelemetry" Version="1.0.0" />
-    <PackageVersion Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.8" />
-	<PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect">
-	  <Version Condition="'$(TargetFramework)' == 'net8.0'">8.0.11</Version>
-	  <Version Condition="'$(TargetFramework)' == 'net9.0'">9.0.0</Version>
-	</PackageVersion>
+    <PackageVersion Include="JetBrains.Annotations" Version="2024.2.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.Authentication.OpenIdConnect">
+      <Version Condition="'$(TargetFramework)' == 'net8.0'">8.0.11</Version>
+      <Version Condition="'$(TargetFramework)' == 'net9.0'">9.0.0</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.0.7" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="8.0.12" />
+    <PackageVersion Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="8.0.7" />
     <PackageVersion Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.8" />
     <PackageVersion Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
     <PackageVersion Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.8" />
-	<PackageVersion Include="Microsoft.AspNetCore.OpenApi">
-		<Version Condition="'$(TargetFramework)' == 'net8.0'">8.0.11</Version>
-		<Version Condition="'$(TargetFramework)' == 'net9.0'">9.0.0</Version>
-	</PackageVersion>
+    <PackageVersion Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+    <PackageVersion Include="Microsoft.AspNetCore.OpenApi">
+      <Version Condition="'$(TargetFramework)' == 'net8.0'">8.0.11</Version>
+      <Version Condition="'$(TargetFramework)' == 'net9.0'">9.0.0</Version>
+    </PackageVersion>
     <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageVersion Include="Microsoft.Extensions.Caching.Memory" Version="9.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions">
-		<Version Condition="'$(TargetFramework)' == 'net6.0'">8.0.0</Version>
-		<Version Condition="'$(TargetFramework)' == 'net7.0'">8.0.0</Version>
-		<Version Condition="'$(TargetFramework)' == 'net8.0'">9.0.0</Version>
-		<Version Condition="'$(TargetFramework)' == 'net9.0'">8.0.0</Version>
-	</PackageVersion>
+      <Version Condition="'$(TargetFramework)' == 'net6.0'">8.0.0</Version>
+      <Version Condition="'$(TargetFramework)' == 'net7.0'">8.0.0</Version>
+      <Version Condition="'$(TargetFramework)' == 'net8.0'">9.0.0</Version>
+      <Version Condition="'$(TargetFramework)' == 'net9.0'">8.0.0</Version>
+    </PackageVersion>
     <PackageVersion Include="Microsoft.Extensions.Hosting" Version="9.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Http.Resilience" Version="9.0.0" />
     <PackageVersion Include="Microsoft.Extensions.Identity.Stores" Version="8.0.8" />
     <PackageVersion Include="Microsoft.Extensions.ServiceDiscovery" Version="9.0.0" />
+    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components" Version="4.11.1" />
+    <PackageVersion Include="Microsoft.FluentUI.AspNetCore.Components.Icons" Version="4.11.1" />
     <PackageVersion Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.6" />
     <PackageVersion Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.10.0" />
     <PackageVersion Include="OpenTelemetry.Extensions.Hosting" Version="1.10.0" />
@@ -55,6 +48,7 @@
     <PackageVersion Include="Remora.Discord" Version="2024.3.0" />
     <PackageVersion Include="Remora.Discord.Caching.Redis" Version="1.1.8" />
     <PackageVersion Include="Remora.Plugins" Version="3.0.7" />
+    <PackageVersion Include="Remora.Rest.Core" Version="2.2.1" />
     <PackageVersion Include="Remora.Results" Version="7.4.1" />
     <PackageVersion Include="Remora.Results.Analyzers" Version="1.0.2" />
     <PackageVersion Include="Serilog" Version="4.2.0" />
@@ -69,5 +63,12 @@
     <PackageVersion Include="Swashbuckle.AspNetCore" Version="6.9.0" />
     <PackageVersion Include="System.IO.Hashing" Version="9.0.0" />
     <PackageVersion Include="System.Text.Json" Version="9.0.0" />
+    <PackageVersion Include="Zitadel" Version="7.0.10" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(IsTestProject)' == true">
+    <PackageVersion Include="coverlet.collector" Version="6.0.3" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.0.1" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Analyzer.Testing.XUnit" Version="1.1.2" />
   </ItemGroup>
 </Project>

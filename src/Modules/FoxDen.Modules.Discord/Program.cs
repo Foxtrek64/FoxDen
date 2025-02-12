@@ -22,7 +22,6 @@
 
 using System;
 using System.Threading.Tasks;
-using FoxDen.Modules.Base.Extensions;
 using FoxDen.Modules.Discord.Commands;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -83,7 +82,6 @@ namespace FoxDen.Modules.Discord
                 .Enrich.FromLogContext()
                 .WriteTo.Console()
                 .WriteTo.Debug()
-                .WriteTo.AspireEventSource(builder.Configuration)
                 .CreateLogger();
 
             Log.Logger = serilogLogger;
@@ -99,7 +97,7 @@ namespace FoxDen.Modules.Discord
             }
             catch (Exception ex)
             {
-                Log.Logger.Fatal(ex, "A fatal error has occurred: {message}", ex.Message);
+                Log.Logger.Fatal(ex, "A fatal error has occurred: {Message}", ex.Message);
                 throw;
             }
         }

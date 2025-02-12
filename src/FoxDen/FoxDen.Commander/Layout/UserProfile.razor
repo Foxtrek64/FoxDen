@@ -1,0 +1,31 @@
+﻿@using System.Diagnostics.CodeAnalysis
+@using System.Security.Claims
+
+<CascadingAuthenticationState>
+    <AuthorizeView>
+        <Authorized>
+            <FluentStack HorizontalAlignment="HorizontalAlignment.End"
+                         VerticalAlignment="VerticalAlignment.Center"
+                         Style="height: 48px; background: var(--neutral-layer-4); padding-inline-end: 10px">
+                <FluentProfileMenu></FluentProfileMenu>
+            </FluentStack>
+        </Authorized>
+        <NotAuthorized>
+            
+        </NotAuthorized>
+    </AuthorizeView>
+</CascadingAuthenticationState>
+
+@code {
+    [CascadingParameter] private Task<AuthenticationState> GetAuthenticationStateAsync { get; set; }
+
+    private ClaimsPrincipal? _user;
+    
+    [MemberNotNull(nameof(_user))]
+    protected override async Task OnInitializedAsync()
+    {
+        AuthenticationState authState = await GetAuthenticationStateAsync;
+        _user = authState.User;
+    }
+
+}

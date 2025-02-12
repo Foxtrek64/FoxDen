@@ -20,4 +20,8 @@
 	  <Folder Include="EntityConfigurations\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\FoxDen.Data.Abstractions\FoxDen.Data.Abstractions.csproj" />
+	</ItemGroup>
+
 </Project>

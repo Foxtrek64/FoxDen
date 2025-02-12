@@ -20,12 +20,14 @@
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+using Remora.Plugins.Abstractions;
+
 namespace FoxDen.Modules.Base.Plugins
 {
     /// <summary>
     /// A plugin intended only for registration with the front-end.
     /// </summary>
-    public interface IFrontEndPlugin
+    public interface IFrontEndPlugin : IPluginDescriptor
     {
     }
 }
