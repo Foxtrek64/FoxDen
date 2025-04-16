@@ -10,7 +10,6 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
 		<PackageReference Include="Remora.Rest.Core" />
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
 		<PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" />
@@ -22,6 +21,10 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\FoxDen.Data.Abstractions\FoxDen.Data.Abstractions.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageVersion Update="JetBrains.Annotations" Version="2024.3.0" />
 	</ItemGroup>
 
 </Project>
