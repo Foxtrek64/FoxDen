@@ -9,4 +9,7 @@
 	  <PackageTags>$(PackageTags);Data;Abstractions;</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup>
+  </ItemGroup>
+
 </Project>
