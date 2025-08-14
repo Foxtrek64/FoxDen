@@ -1,0 +1,36 @@
+﻿<Project Sdk="Remora.Sdk">
+
+	<PropertyGroup>
+		<Description>Core database functionality.</Description>
+		<TargetNetStandard>false</TargetNetStandard>
+		<LibraryFrameworks>net8.0;net9.0</LibraryFrameworks>
+	</PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="EFCore.NamingConventions" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="Remora.Rest.Core" />
+    <PackageReference Include="Remora.Results" />
+    <PackageReference Include="Remora.Results.Analyzers" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\FoxDen.Core\FoxDen.Core.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Converters\" />
+  </ItemGroup>
+
+</Project>

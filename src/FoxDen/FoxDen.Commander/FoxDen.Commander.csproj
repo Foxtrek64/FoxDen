@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components" />
+    <PackageReference Include="Microsoft.FluentUI.AspNetCore.Components.Icons" />
+    <PackageReference Include="Remora.Plugins" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\FoxDen.Core.Data\FoxDen.Core.Data.csproj" />
+    <ProjectReference Include="..\..\Core\FoxDen.Core\FoxDen.Core.csproj" />
+    <ProjectReference Include="..\FoxDen.ServiceDefaults\FoxDen.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

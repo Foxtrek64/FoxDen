@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		Directory.Packages.props = Directory.Packages.props
+		global.json = global.json
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9F4AFAF6-7143-42FB-9F31-FF4DCB070522}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3B7CD2EA-554D-4B5D-89C2-CE44BDE24CFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FoxDen", "FoxDen", "{AC063CBB-7E80-47C0-A7E9-92E3E84FB944}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4FF470AF-AC82-4666-A06E-7572EB6CCE67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{10354A66-EE49-4FB3-81D1-51566F68FD22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.ApiService", "src\FoxDen\FoxDen.ApiService\FoxDen.ApiService.csproj", "{CAE7A5D3-3145-78D1-C675-54EE3044FB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.AppHost", "src\FoxDen\FoxDen.AppHost\FoxDen.AppHost.csproj", "{92E5FA0A-9395-480E-39F0-90F66D3A47D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Commander", "src\FoxDen\FoxDen.Commander\FoxDen.Commander.csproj", "{D2F810E1-E376-4E8E-97E6-DCEE0E706877}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.ServiceDefaults", "src\FoxDen\FoxDen.ServiceDefaults\FoxDen.ServiceDefaults.csproj", "{B61A24F9-CEB8-BEE8-22B4-894C4199F564}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Core", "src\Core\FoxDen.Core\FoxDen.Core.csproj", "{63D9DB1C-957E-9704-C23A-3107AB438BFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoxDen.Core.Data", "src\Core\FoxDen.Core.Data\FoxDen.Core.Data.csproj", "{46201232-38F5-28DE-3365-4EEC60455F54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAE7A5D3-3145-78D1-C675-54EE3044FB80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE7A5D3-3145-78D1-C675-54EE3044FB80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE7A5D3-3145-78D1-C675-54EE3044FB80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE7A5D3-3145-78D1-C675-54EE3044FB80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E5FA0A-9395-480E-39F0-90F66D3A47D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E5FA0A-9395-480E-39F0-90F66D3A47D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E5FA0A-9395-480E-39F0-90F66D3A47D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E5FA0A-9395-480E-39F0-90F66D3A47D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2F810E1-E376-4E8E-97E6-DCEE0E706877}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2F810E1-E376-4E8E-97E6-DCEE0E706877}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2F810E1-E376-4E8E-97E6-DCEE0E706877}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2F810E1-E376-4E8E-97E6-DCEE0E706877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61A24F9-CEB8-BEE8-22B4-894C4199F564}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61A24F9-CEB8-BEE8-22B4-894C4199F564}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61A24F9-CEB8-BEE8-22B4-894C4199F564}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61A24F9-CEB8-BEE8-22B4-894C4199F564}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D9DB1C-957E-9704-C23A-3107AB438BFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D9DB1C-957E-9704-C23A-3107AB438BFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D9DB1C-957E-9704-C23A-3107AB438BFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D9DB1C-957E-9704-C23A-3107AB438BFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46201232-38F5-28DE-3365-4EEC60455F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46201232-38F5-28DE-3365-4EEC60455F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46201232-38F5-28DE-3365-4EEC60455F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46201232-38F5-28DE-3365-4EEC60455F54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC063CBB-7E80-47C0-A7E9-92E3E84FB944} = {9F4AFAF6-7143-42FB-9F31-FF4DCB070522}
+		{4FF470AF-AC82-4666-A06E-7572EB6CCE67} = {9F4AFAF6-7143-42FB-9F31-FF4DCB070522}
+		{10354A66-EE49-4FB3-81D1-51566F68FD22} = {9F4AFAF6-7143-42FB-9F31-FF4DCB070522}
+		{CAE7A5D3-3145-78D1-C675-54EE3044FB80} = {AC063CBB-7E80-47C0-A7E9-92E3E84FB944}
+		{92E5FA0A-9395-480E-39F0-90F66D3A47D4} = {AC063CBB-7E80-47C0-A7E9-92E3E84FB944}
+		{D2F810E1-E376-4E8E-97E6-DCEE0E706877} = {AC063CBB-7E80-47C0-A7E9-92E3E84FB944}
+		{B61A24F9-CEB8-BEE8-22B4-894C4199F564} = {AC063CBB-7E80-47C0-A7E9-92E3E84FB944}
+		{63D9DB1C-957E-9704-C23A-3107AB438BFE} = {4FF470AF-AC82-4666-A06E-7572EB6CCE67}
+		{46201232-38F5-28DE-3365-4EEC60455F54} = {4FF470AF-AC82-4666-A06E-7572EB6CCE67}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3A197BB-D22A-43F3-82E5-3751771088BD}
+	EndGlobalSection
+EndGlobal

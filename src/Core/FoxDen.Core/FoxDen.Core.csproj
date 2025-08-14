@@ -1,0 +1,9 @@
+﻿<Project Sdk="Remora.Sdk">
+
+	<PropertyGroup>
+		<Description>Core concepts and shared classes for FoxDen and its plugins.</Description>
+		<TargetNetStandard>false</TargetNetStandard>
+		<LibraryFrameworks>net8.0;net9.0</LibraryFrameworks>
+	</PropertyGroup>
+
+</Project>

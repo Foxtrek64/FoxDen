@@ -1,0 +1,962 @@
+@import '_content/Microsoft.FluentUI.AspNetCore.Components/css/reboot.css';
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: var(--body-font);
+    font-size: var(--type-ramp-base-font-size);
+    line-height: var(--type-ramp-base-line-height);
+    font-weight: var(--font-weight);
+    color: var(--neutral-foreground-rest);
+    background: var(--neutral-fill-layer-rest);
+    --body-font: "Segoe UI Variable", "Segoe UI", sans-serif;
+}
+
+.main {
+    min-height: calc(100dvh - 86px);
+    color: var(--neutral-foreground-rest);
+    align-items: stretch !important;
+}
+
+.body-content {
+    align-self: stretch;
+    height: calc(100dvh - 86px) !important;
+    display: flex;
+}
+
+.content {
+    padding: 0.5rem 1.5rem;
+    align-self: stretch !important;
+    width: 100%;
+}
+
+.manage {
+    width: 100dvw;
+}
+
+footer {
+    background: var(--neutral-layer-4);
+    color: var(--neutral-foreground-rest);
+    align-items: center;
+    padding: 10px 10px;
+}
+
+    footer a {
+        color: var(--neutral-foreground-rest);
+        text-decoration: none;
+    }
+
+        footer a:focus {
+            outline: 1px dashed;
+            outline-offset: 3px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+.alert {
+    border: 1px dashed var(--accent-fill-rest);
+    padding: 5px;
+}
+
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    margin: 20px 0;
+}
+
+    #blazor-error-ui .dismiss {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+    }
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+    .blazor-error-boundary::before {
+        content: "An error has occurred. "
+    }
+
+.loading-progress {
+    position: relative;
+    display: block;
+    width: 8rem;
+    height: 8rem;
+    margin: 20vh auto 1rem auto;
+}
+
+    .loading-progress circle {
+        fill: none;
+        stroke: #e0e0e0;
+        stroke-width: 0.6rem;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg);
+    }
+
+        .loading-progress circle:last-child {
+            stroke: #1b6ec2;
+            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
+            transition: stroke-dasharray 0.05s ease-in-out;
+        }
+
+.loading-progress-text {
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+}
+
+    .loading-progress-text:after {
+        content: var(--blazor-load-percentage-text, "Loading");
+    }
+
+code {
+    color: #c02d76;
+}
+
+@media (max-width: 600px) {
+    .header-gutters {
+        margin: 0.5rem 3rem 0.5rem 1.5rem !important;
+    }
+
+    [dir="rtl"] .header-gutters {
+        margin: 0.5rem 1.5rem 0.5rem 3rem !important;
+    }
+
+    .main {
+        flex-direction: column !important;
+        row-gap: 0 !important;
+    }
+}
+
+* {
+    scrollbar-color: var(--scrollbar-color) transparent;
+}
+
+.visualizer-title-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "dialog-icon dialog-title dialog-format";
+    grid-column-gap: 8px;
+}
+
+fluent-toolbar fluent-switch,
+fluent-toolbar p {
+    margin-inline-end: 15px;
+}
+
+fluent-toolbar[orientation=horizontal] {
+    width: 100%;
+    padding-right: calc(var(--design-unit) * 2px);
+}
+
+fluent-toolbar::part(positioning-region) {
+    row-gap: calc(var(--design-unit) * 1.5px);
+}
+
+fluent-toolbar::part(end) {
+    flex-wrap: wrap;
+    row-gap: calc(var(--design-unit) * 1.5px);
+}
+
+/* Hide any web components that haven't been */
+:not(:defined),
+.before-upgrade {
+    visibility: hidden;
+}
+
+.col-long-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 100%;
+}
+
+.trace-tag-icon {
+    margin-right: 3px;
+}
+
+:root {
+    --scrollbar-color: #8B8B8B;
+    --log-critical: #F8ECEB;
+    --log-error: #F8ECEB;
+    --log-warning: #FBF3DD;
+    --info: #717171 !important;
+    --warning: #E85E36 !important;
+    --success: #108310 !important;
+    --badge-fill-error: var(--error);
+    --badge-fill-warning: var(--warning);
+    --badge-color-error: var(--foreground-on-accent-rest);
+    --foreground-subtext-rest: #5D5D5D;
+    --foreground-subtext-hover: #6C6C6C;
+    --foreground-settings-text: var(--foreground-subtext-rest);
+    --error-ui-foreground-color: #131313;
+    --error-ui-accent-foreground-color: #1d00d0;
+    --reconnection-ui-bg: rgb(255, 255, 255);
+    --error-counter-badge-foreground-color: var(--neutral-fill-rest);
+    --kbd-background-color: var(--neutral-layer-4);
+    --messagebar-warning-background-color: #FDF6F3;
+    --messagebar-warning-border-color: #f4bfab;
+    --messagebar-info-background-color: #f5f5f5;
+    --messagebar-info-border-color: #d1d1d1;
+    --layout-toolbar-padding: calc(var(--design-unit) * 1.5px);
+    /*
+        --neutral-layer-2 is the background for the body of most of the site so
+        we can default the datagrid hover color to that and just override it as
+        necessary elsewhere (e.g. in the details view)
+    */
+    --datagrid-hover-color: var(--neutral-layer-2-hover);
+    /* highlight JS theme variables */
+    --hljs-default: #545454;
+    --hljs-comment: #696969;
+    --hljs-variable: #d91e18;
+    --hljs-literal: #aa5d00;
+    --hljs-attribute: #aa5d00;
+    --hljs-string: green;
+    --hljs-section: #007faa;
+    --hljs-keyword: #7928a1;
+}
+
+[data-theme="dark"] {
+    --scrollbar-color: #9F9F9F;
+    --log-critical: #493634;
+    --log-error: #493634;
+    --log-warning: #3F3A2B;
+    --foreground-subtext-rest: #8D8D8D;
+    --foreground-subtext-hover: #A1A1A1;
+    --foreground-settings-text: #A8A8A8;
+    --error-ui-foreground-color: #000000;
+    --error-ui-accent-foreground-color: #512bd4;
+    --reconnection-ui-bg: #D6D6D6;
+    --error-counter-badge-foreground-color: #ffffff;
+    --kbd-background-color: var(--fill-color);
+    --messagebar-warning-background-color: #411200;
+    --messagebar-warning-border-color: #DA3B01;
+    --messagebar-info-background-color: #141414;
+    --messagebar-info-border-color: #666;
+    /* overrides of default fluentui-blazor styling */
+    --error: #E10B11 !important;
+    color-scheme: dark;
+    /* highlight JS theme variables */
+    --hljs-default: #f8f8f2;
+    --hljs-comment: #d4d0ab;
+    --hljs-variable: #ffa07a;
+    --hljs-literal: #f5ab35;
+    --hljs-attribute: gold;
+    --hljs-string: #abe338;
+    --hljs-section: #00e0e0;
+    --hljs-keyword: #dcc6e0;
+}
+
+.fluent-data-grid-row.hover:not([row-type='header'],[row-type='sticky-header']):hover td {
+    cursor: auto !important;
+}
+
+.enable-row-click .fluent-data-grid-row.hover:not([row-type='header'],[row-type='sticky-header'], .empty-content-row, .loading-content-row):hover td {
+    cursor: pointer !important;
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+}
+
+fluent-select.resource-list {
+    /* overrides of default fluentui-blazor styling */
+    --disabled-opacity: 0.7;
+}
+
+[data-theme="dark"] fluent-select.resource-list {
+    /* overrides of default fluentui-blazor styling */
+    --disabled-opacity: 0.85;
+}
+
+h1 {
+    font-size: var(--type-ramp-plus-4-font-size);
+    line-height: var(--type-ramp-plus-4-line-height);
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+#components-reconnect-modal :is(h5, p) {
+    color: var(--error-ui-foreground-color);
+}
+
+#components-reconnect-modal a {
+    color: var(--error-ui-accent-foreground-color);
+}
+
+#components-reconnect-modal {
+    /* avoid making modal take the entire screen dimensions */
+    inset: unset !important;
+    /* force modal to be compact, centered, slightly padded, and towards the top - media queries below adjust the width and height of the modal for
+     mobile and desktop screens
+    */
+    top: 5% !important;
+    padding: 2px;
+    /* add a slight shadow */
+    box-shadow: 2px 2px 2px var(--neutral-fill-secondary-rest);
+    /* avoid modal being see-through */
+    opacity: 1 !important;
+    /* ensure sufficient contrast between all elements in the modal and its background */
+    background-color: var(--reconnection-ui-bg) !important;
+}
+
+@media (max-width: 768px) {
+    #components-reconnect-modal {
+        left: 15% !important;
+        right: 15% !important;
+        height: 130px;
+    }
+
+    fluent-toolbar[orientation=horizontal].main-toolbar {
+        padding-left: calc(var(--design-unit) * 2px);
+        padding-right: calc(var(--design-unit) * 2px);
+    }
+
+    /* we want less padding on mobile screens to preserve screen height for other elements */
+    .page-header {
+        padding: calc(var(--design-unit) * 1.5px) calc(var(--design-unit) * 2.5px) 0;
+        width: fit-content;
+    }
+
+        .page-header > h1 {
+            white-space: normal;
+        }
+
+    .hidden-on-mobile {
+        visibility: collapse;
+    }
+}
+
+@media (min-width: 768px) {
+    #components-reconnect-modal {
+        left: 30% !important;
+        right: 30% !important;
+        height: 105px;
+    }
+
+    fluent-toolbar[orientation=horizontal].main-toolbar {
+        padding-left: calc(var(--design-unit) * 4.5px);
+        padding-right: calc(var(--design-unit) * 2px);
+    }
+
+    .page-header {
+        padding: calc(var(--design-unit) * 1.5px) calc(var(--design-unit) * 4.5px);
+    }
+}
+
+.datagrid-overflow-area,
+.parent-details-container {
+    /*
+        Height of the browser - static height for other content
+        TODO: Is there a better way to do this?
+    */
+    height: 100%;
+    min-width: 100%;
+    overflow: auto;
+}
+
+.fluent-data-grid .empty-content-cell,
+.fluent-data-grid .loading-content-cell {
+    padding: calc(var(--design-unit) * 5px);
+    display: flex;
+    align-items: center;
+    height: auto !important; /* override height in td style attribute */
+    justify-content: center;
+}
+    /*
+    Default LoadingContent template has align-items set to start, so the
+    text doesn't line up with the spinner properly. It is set via inline style
+    so we need to use !important to override it.
+*/
+    .fluent-data-grid .loading-content-cell .stack-horizontal {
+        align-items: center !important;
+        column-gap: calc(var(--design-unit) * 2px) !important;
+    }
+
+.custom-body-content {
+    margin-right: 10px;
+}
+
+.top-messagebar {
+    padding: calc(var(--design-unit) * 4px);
+    padding-top: calc(var(--design-unit) * 2px);
+    padding-bottom: 0 !important;
+}
+
+.fluent-messagebar.intent-warning {
+    background-color: var(--messagebar-warning-background-color) !important;
+    border: 1px solid var(--messagebar-warning-border-color) !important;
+}
+
+.fluent-messagebar.intent-info {
+    background-color: var(--messagebar-info-background-color) !important;
+    border: 1px solid var(--messagebar-info-border-color) !important;
+}
+
+/* The fluent dialog's default fill color is too dark in our current dark theme.
+   Setting it to the floating layer allows it to stand out more and doesn't impact light theme. */
+fluent-dialog::part(control) {
+    background: var(--neutral-layer-floating);
+}
+
+fluent-dialog fluent-toolbar {
+    background-color: var(--neutral-layer-floating);
+}
+
+/* Changing the dialog's fill color means stealth buttons on the dialog have the wrong background,
+   so change it to match */
+fluent-dialog fluent-button[appearance=stealth]:not(:hover)::part(control),
+fluent-dialog fluent-button[appearance=lightweight]:not(:hover)::part(control),
+fluent-dialog fluent-anchor[appearance=stealth]:not(:hover)::part(control),
+fluent-dialog fluent-anchor[appearance=lightweight]:not(:hover)::part(control) {
+    background: var(--neutral-layer-floating);
+}
+
+/* But changing the stealth button's background in dialogs means the stealth buttons used as headers for grid cells
+   now have the wrong background. So change that back */
+fluent-dialog td[cell-type=columnheader] fluent-button[appearance=stealth]:not(:hover)::part(control) {
+    background: var(--fill-layer);
+}
+
+.pane-details-subtext {
+    color: var(--foreground-subtext-rest);
+    padding-left: 0.5rem;
+    font-size: 12px;
+}
+
+td .long-inner-content {
+    width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.parent-details-container {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: calc(var(--design-unit) * 2px);
+}
+
+.version {
+    text-align: end;
+    font-size: small;
+    width: 100%;
+    flex-grow: 1;
+    /* right/bottom align the inner version text */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+}
+
+.anchor-no-padding::part(control) {
+    padding: 0;
+    flex-grow: 0;
+}
+
+.ellipsis-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fluent-popover-header,
+.fluent-popover-body {
+    color: var(--neutral-foreground-rest);
+}
+
+.subtext {
+    color: var(--foreground-subtext-rest);
+}
+
+.selected-row .subtext {
+    color: var(--neutral-foreground-rest);
+}
+
+.validation-message {
+    color: var(--error);
+}
+
+.selected-row,
+.selected-row fluent-button[appearance=lightweight]:not(:hover)::part(control),
+.selected-row fluent-anchor[appearance=lightweight]:not(:hover)::part(control) {
+    background-color: var(--neutral-fill-secondary-rest); /* Same color as the menu hover */
+}
+
+    .selected-row fluent-button[appearance=lightweight]:hover::part(control),
+    .selected-row fluent-anchor[appearance=lightweight]:hover::part(control) {
+        background-color: var(--neutral-fill-stealth-rest); /* Essentially inverts the hover compared to an unselected row */
+    }
+
+.severity-icon {
+    vertical-align: text-bottom;
+    margin-right: 3px;
+}
+
+.persistent-container-icon {
+    vertical-align: text-bottom;
+    margin-left: 4px;
+}
+
+.align-text-bottom {
+    vertical-align: text-bottom;
+}
+
+.visually-hidden {
+    top: 0;
+    left: -2px;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+}
+
+split-panels::part(handle) {
+    display: none;
+}
+
+div.error-counter-badge {
+    padding: 3px 3px;
+    color: var(--error-counter-badge-foreground-color) !important; /* color is applied directly to div style, so !important to override since we can't use a more specific selector */
+}
+
+.layout > .header > .header-gutters {
+    margin: 0 1.5rem 0 0;
+}
+
+layout > .header {
+    font-size: var(--type-ramp-base-font-size);
+}
+
+.flex-filler {
+    flex-grow: 1;
+}
+
+
+kbd {
+    color: unset;
+    background-color: var(--kbd-background-color);
+}
+
+fluent-switch.table-switch::part(label) {
+    width: 160px;
+}
+
+/*
+    If ShowHover is enabled on a FluentDataGrid, we need to tweak the way anchors and buttons
+    are colored when a row is hovered
+*/
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-anchor[appearance=lightweight]::part(control):not(:hover),
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-anchor[appearance=stealth]::part(control):not(:hover),
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-button[appearance=lightweight]::part(control):not(:hover),
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-button[appearance=stealth]::part(control):not(:hover) {
+    background-color: var(--datagrid-hover-color);
+}
+
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-anchor[appearance=lightweight]::part(control):hover,
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-anchor[appearance=stealth]::part(control):hover,
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-button[appearance=lightweight]::part(control):hover,
+.fluent-data-grid-row:not([row-type='header'],[row-type='sticky-header']).hover:hover fluent-button[appearance=stealth]::part(control):hover {
+    background-color: var(--fill-color);
+}
+
+.property-grid-container {
+    grid-area: main;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: calc(var(--design-unit) * 1px);
+    padding-top: 0;
+}
+
+    .property-grid-container fluent-accordion {
+        gap: calc(var(--design-unit) * 2px);
+        margin-bottom: calc(var(--design-unit) * 1px);
+        --fill-color: var(--neutral-layer-1);
+    }
+
+    .property-grid-container > fluent-accordion > fluent-accordion-item::part(heading) {
+        padding-left: calc(var(--design-unit) * 2 * 1px);
+    }
+
+    .property-grid-container fluent-accordion .fluent-data-grid {
+        --datagrid-hover-color: var(--neutral-layer-1-hover);
+    }
+
+/* Under the current light theme, --neutral-layer-1 is too white, so we'll
+   use something that's halfway between --neutral-layer-2 and --neutral-layer-1.
+*/
+[data-theme="light"] .property-grid-container fluent-accordion {
+    --fill-color: var(--neutral-fill-rest);
+}
+
+.property-grid-container fluent-accordion-item,
+.property-grid-container fluent-accordion-item::part(region) {
+    background-color: var(--fill-color);
+}
+
+/* This is a hack because we can't do a selector that selects inside of a ::part,
+   which is what we'd need to do to access `::part(heading):not(:hover) .icon`.
+   So instead we just change the color token the non-hovered state uses.
+*/
+[data-theme="light"] .property-grid-container fluent-accordion-item::part(icon) {
+    --neutral-fill-stealth-rest-on-neutral-fill-layer-rest: var(--fill-color);
+}
+
+.property-grid-container fluent-accordion-item::part(region) {
+    padding-bottom: 0;
+}
+
+.property-grid-container fluent-accordion-item::part(heading-content) {
+    font-weight: 600;
+    font-size: var(--type-ramp-plus-1-font-size);
+}
+
+.property-grid-container fluent-accordion .fluent-data-grid-row:last-of-type {
+    border-bottom: none;
+}
+
+.property-grid-container fluent-accordion .fluent-data-grid-row fluent-button[appearance=stealth]::part(control):not(:hover),
+.property-grid-container fluent-accordion .fluent-data-grid-row fluent-button[appearance=lightweight]::part(control):not(:hover) {
+    background-color: var(--fill-color);
+}
+
+.property-grid-container fluent-accordion .fluent-data-grid-row:is([row-type='header'],[row-type='sticky-header']) fluent-button[appearance=stealth]::part(control):hover,
+.property-grid-container fluent-accordion .fluent-data-grid-row:is([row-type='header'],[row-type='sticky-header']) fluent-button[appearance=lightweight]::part(control):hover {
+    background-color: var(--neutral-fill-stealth-hover-on-neutral-fill-layer-rest);
+}
+
+/* Under the current dark theme, the fluent-badge background color was too dark on --neutral-layer-1 */
+[data-theme="dark"] .property-grid-container fluent-accordion-item fluent-badge::part(control) {
+    background-color: var(--neutral-fill-active);
+}
+
+.items-footer {
+    display: flex;
+    column-gap: 20px;
+    min-height: 46px;
+    align-items: center;
+}
+
+    .items-footer .result-count {
+        padding-left: calc(var(--design-unit) * 4.5px);
+    }
+
+/* Align the toast with the top of the body/bottom of the header
+   and the right edge of the filter box
+*/
+.layout .fluent-toast-provider.position-topright {
+    top: 50px;
+    right: calc(var(--design-unit) * 1.5px);
+}
+
+
+/* Some of the data-columns (e.g. logs and details in the resource page)
+   should not have ellipsis as this is unnecessary and a bit distracting.
+
+*/
+.fluent-data-grid .no-ellipsis {
+    text-overflow: unset;
+}
+
+.url-overflow {
+    overflow-x: visible !important;
+}
+
+    .url-overflow .fluent-overflow-more fluent-button {
+        vertical-align: middle;
+    }
+
+.url-button {
+    height: unset;
+    font-size: var(--type-ramp-minus-1-font-size);
+    line-height: var(--type-ramp-minus-1-line-height);
+}
+
+    .url-button::part(control) {
+        padding: calc(((var(--design-unit) * 0.5) - var(--stroke-width)) * 1px) calc((var(--design-unit) - var(--stroke-width)) * 1px);
+    }
+
+.mobile-toolbar {
+    width: 100%;
+    height: max(5vh, 30px);
+}
+
+.mobile-absolute-toolbar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.page-content-container {
+    height: 100%;
+    overflow: auto;
+}
+
+.log-overflow {
+    --console-theme-black: #0C0C0C;
+    --console-theme-blue: #0037DA;
+    --console-theme-cyan: #3A96DD;
+    --console-theme-green: #13A10E;
+    --console-theme-magenta: #CD13E8;
+    --console-theme-bg-red: #F80F24;
+    --console-theme-fg-red: #C50F1F;
+    --console-theme-white: #CCCCCC;
+    --console-theme-yellow: #C19C00;
+    --console-theme-bright-black: #767676;
+    --console-theme-bright-blue: #3B78FF;
+    --console-theme-bright-cyan: #61D6D6;
+    --console-theme-bright-green: #16C60C;
+    --console-theme-bright-magenta: #DA01FA;
+    --console-theme-bright-red: #E74856;
+    --console-theme-bright-white: #F2F2F2;
+    --console-theme-bright-yellow: #F9F1A5;
+    --line-number-color: #848484;
+    --timestamp-color: var(--line-number-color);
+    --console-background-color: var(--console-theme-black);
+    --console-background-color-hover: #1D1D1D;
+    --console-font-color: var(--console-theme-white);
+    width: 100%;
+    overflow: auto;
+}
+
+.console-overflow {
+    background-color: var(--console-background-color);
+    height: 100%;
+}
+
+.log-container {
+    font-family: 'Cascadia Mono', Consolas, monospace;
+    font-size: 13px;
+    line-height: 20px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.log-line-row-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.log-line-row {
+    cursor: text;
+    padding: 0 12px 0 0;
+    white-space: pre-wrap;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.log-line-area {
+    flex-grow: 1;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+}
+
+.log-line-number {
+    min-width: 53px;
+    text-align: right;
+    align-self: flex-start;
+    flex-shrink: 0;
+    color: var(--line-number-color);
+    user-select: none;
+    cursor: default;
+    height: 100%;
+}
+
+.log-content {
+    word-break: break-all;
+    margin-left: 20px;
+    position: relative;
+    margin-right: 6px;
+    user-select: text;
+    cursor: text;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.resource-select-application-label {
+    color: var(--accent-foreground-rest);
+}
+
+.filter-input-container {
+    width: 85%;
+}
+
+.filter-button-container {
+    display: flex;
+}
+
+.layout fluent-toolbar > .fluent-input-label {
+    margin-bottom: 0;
+}
+
+.action-divider {
+    display: inline;
+    height: 20px;
+}
+
+.grid-action-container {
+    display: inline-flex;
+    column-gap: 4px;
+    align-items: center;
+}
+
+.empty-data::before {
+    content: "-"
+}
+
+.fluent-data-grid {
+    height: auto !important; /* override height in table style attribute */
+}
+
+.main-grid-expand-container {
+    display: inline-block;
+    width: 18px;
+}
+
+    .main-grid-expand-container svg {
+        transition: transform 0.1s linear;
+        pointer-events: none;
+    }
+
+.main-grid-collapsed svg {
+    transform: rotate(0deg);
+}
+
+.main-grid-expanded svg {
+    transform: rotate(90deg);
+}
+
+.main-grid-expand-button {
+    width: 18px;
+    height: 24px;
+    min-width: 18px;
+    vertical-align: middle;
+}
+
+.main-grid .fluent-data-grid-row:not([row-type='sticky-header']) td.expand-col {
+    padding-left: 0;
+    border-left: 0;
+}
+
+.main-grid .fluent-data-grid-row:not([row-type='sticky-header'], .empty-content-row) td:first-child:not(.expand-col) {
+    padding-left: calc(((var(--design-unit)* 3) + var(--focus-stroke-width) - var(--stroke-width) + 5)* 1px);
+}
+
+/* Line up the first column header with the content. TODO: A bit of a mess. See if it can be improved */
+.main-grid .column-header:not(.select-all):first-of-type {
+    padding-inline-start: calc(var(--design-unit)* 2px) !important;
+}
+
+.column-header:not(.select-all):first-of-type, .trace-view-grid .column-header:not(.select-all):first-of-type {
+    padding-inline-start: 0px !important;
+}
+
+.toolbar-left {
+    margin-left: 0;
+}
+
+.setting-subtext {
+    color: var(--foreground-settings-text);
+    font-size: var(--type-ramp-minus-1-font-size);
+    margin: 0;
+}
+
+.setting-title {
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.volume-mount-type-icon {
+    vertical-align: text-bottom;
+    margin-right: 3px
+}
+
+.clear-button::part(control) {
+    padding: 0 calc((10 + (var(--design-unit) * 2 * var(--density))) * 1px);
+}
+
+.language-select {
+    margin-bottom: 2px;
+    min-width: 235px;
+}
+
+.resources-filter-popup {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.filter-menu-item::part(content) {
+    max-width: 300px;
+}
+
+/*
+    Korean text can have bad wrapping behavior. See https://github.com/w3c/csswg-drafts/issues/4285
+    This rule prevents Korean "Close" text in tooltip from wrapping. See https://github.com/dotnet/aspire/issues/8170
+*/
+fluent-tooltip[anchor="dialog_close"] > div {
+    word-break: keep-all;
+}
+
+.block-warning {
+    font-family: var(--body-font);
+    border: 1px solid var(--messagebar-warning-border-color);
+    background-color: var(--messagebar-warning-background-color);
+    color: var(--neutral-foreground-rest);
+    display: grid;
+    grid-template-columns: 24px auto;
+    width: fit-content;
+    align-items: center;
+    min-height: 36px;
+    border-radius: calc(var(--control-corner-radius)* 1px);
+    padding: 0 12px;
+    column-gap: 8px;
+}
+
+.block-warning-icon {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.block-warning-message {
+    grid-column: 2;
+    padding: 8px 0;
+    align-self: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+
+    .block-warning-message .title {
+        font-weight: 600;
+        padding: 0 4px 0 0;
+    }
+
+.resource-icon {
+    vertical-align: text-bottom;
+    margin-right: 3px;
+}
+
+fluent-menu-item::part(content) {
+    width: 100%;
+    text-overflow: ellipsis;
+}

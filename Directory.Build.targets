@@ -1,0 +1,9 @@
+<Project>
+    <PropertyGroup>
+        <PackageDescription>
+$(Description)
+
+New in $(VersionPrefix)$(VersionSuffix): $(PackageReleaseNotes)
+        </PackageDescription>
+    </PropertyGroup>
+</Project>
